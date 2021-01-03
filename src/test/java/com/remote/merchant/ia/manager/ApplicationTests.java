@@ -194,6 +194,6 @@ class ApplicationTests {
 	public void setDepartOrderedCoteNumber(String[] departOrderedCoteNumber) {
 		this.departOrderedCoteNumber = departOrderedCoteNumber;
 	}
-	
+
 	
 }
