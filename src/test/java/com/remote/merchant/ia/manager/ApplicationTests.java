@@ -180,6 +180,20 @@ class ApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-	
+
+	/**
+	 * @return the departOrderedCoteNumber
+	 */
+	public String[] getDepartOrderedCoteNumber() {
+		return departOrderedCoteNumber;
+	}
+
+	/**
+	 * @param departOrderedCoteNumber the departOrderedCoteNumber to set
+	 */
+	public void setDepartOrderedCoteNumber(String[] departOrderedCoteNumber) {
+		this.departOrderedCoteNumber = departOrderedCoteNumber;
+	}
+
 	
 }
