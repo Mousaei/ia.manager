@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ApplicationTests {
 	private String[] departOrderedCoteNumber={"6", "8", "5"};
-	private String[] departCote={"3", "5", "6"};
+	private String[] departOrderedCote={"3", "5", "6"};
 	
 	private String[] arrivalCoteNumber={"17", "32", "3"};
 	private String[] arrivalNumber={"4", "15", "8"};
@@ -17,8 +17,36 @@ class ApplicationTests {
 	private String[] departCotePronostic= {"3", "5", "6"};
 	
 	private String[][] caseCoteFirstPosition = new String[10][3];
-	private String[][] caseRankPronosticFirstPosition = new String[10][3];
+	private String[][] casePronosticFirstPosition = new String[10][3];
 	
+	/**
+	 * @return the departOrderedCote
+	 */
+	public String[] getDepartOrderedCote() {
+		return departOrderedCote;
+	}
+
+	/**
+	 * @param departOrderedCote the departOrderedCote to set
+	 */
+	public void setDepartOrderedCote(String[] departOrderedCote) {
+		this.departOrderedCote = departOrderedCote;
+	}
+
+	/**
+	 * @return the casePronosticFirstPosition
+	 */
+	public String[][] getCasePronosticFirstPosition() {
+		return casePronosticFirstPosition;
+	}
+
+	/**
+	 * @param casePronosticFirstPosition the casePronosticFirstPosition to set
+	 */
+	public void setCasePronosticFirstPosition(String[][] casePronosticFirstPosition) {
+		this.casePronosticFirstPosition = casePronosticFirstPosition;
+	}
+
 	public int calculateCoteFirstPositionByArrival(String[] arrivalCoteNumber) {
 		int somme=0;
 		int median=0;
@@ -43,42 +71,16 @@ class ApplicationTests {
 		this.caseCoteFirstPosition = caseCoteFirstPosition;
 	}
 
-	/**
-	 * @param caseRankPronosticFirstPosition the caseRankPronosticFirstPosition to set
-	 */
-	public void setCaseRankPronosticFirstPosition(String[][] caseRankPronosticFirstPosition) {
-		this.caseRankPronosticFirstPosition = caseRankPronosticFirstPosition;
-	}
+	
 
 	public ApplicationTests() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "ApplicationTests [departCoteNumber=" + Arrays.toString(departOrderedCoteNumber) + ", departCote="
-				+ Arrays.toString(departCote) + ", arrivalCoteNumber=" + Arrays.toString(arrivalCoteNumber)
-				+ ", arrivalNumber=" + Arrays.toString(arrivalNumber) + ", departRankPronostic="
-				+ Arrays.toString(departRankPronostic) + ", departCotePronostic=" + Arrays.toString(departCotePronostic)
-				+ ", caseCoteFirstPosition=" + Arrays.toString(caseCoteFirstPosition)
-				+ ", caseRankPronosticFirstPosition=" + Arrays.toString(caseRankPronosticFirstPosition) + "]";
-	}
-
 	
-	/**
-	 * @return the departCote
-	 */
-	public String[] getDepartCote() {
-		return departCote;
-	}
-
-	/**
-	 * @param departCote the departCote to set
-	 */
-	public void setDepartCote(String[] departCote) {
-		this.departCote = departCote;
-	}
+	
+	
 
 	/**
 	 * @return the arrivalNumber
@@ -136,11 +138,18 @@ class ApplicationTests {
 		return caseCoteFirstPosition;
 	}
 
-	/**
-	 * @return the caseRankPronosticFirstPosition
-	 */
-	public String[][] getCaseRankPronosticFirstPosition() {
-		return caseRankPronosticFirstPosition;
+	
+
+
+	@Override
+	public String toString() {
+		return "ApplicationTests [departOrderedCoteNumber=" + Arrays.toString(departOrderedCoteNumber)
+				+ ", departOrderedCote=" + Arrays.toString(departOrderedCote) + ", arrivalCoteNumber="
+				+ Arrays.toString(arrivalCoteNumber) + ", arrivalNumber=" + Arrays.toString(arrivalNumber)
+				+ ", departRankPronostic=" + Arrays.toString(departRankPronostic) + ", departCotePronostic="
+				+ Arrays.toString(departCotePronostic) + ", caseCoteFirstPosition="
+				+ Arrays.toString(caseCoteFirstPosition) + ", casePronosticFirstPosition="
+				+ Arrays.toString(casePronosticFirstPosition) + "]";
 	}
 
 	@Override
@@ -149,11 +158,11 @@ class ApplicationTests {
 		int result = 1;
 		result = prime * result + Arrays.hashCode(arrivalCoteNumber);
 		result = prime * result + Arrays.hashCode(arrivalNumber);
-		result = prime * result + Arrays.hashCode(caseCoteFirstPosition);
-		result = prime * result + Arrays.hashCode(caseRankPronosticFirstPosition);
-		result = prime * result + Arrays.hashCode(departCote);
-		result = prime * result + Arrays.hashCode(departOrderedCoteNumber);
+		result = prime * result + Arrays.deepHashCode(caseCoteFirstPosition);
+		result = prime * result + Arrays.deepHashCode(casePronosticFirstPosition);
 		result = prime * result + Arrays.hashCode(departCotePronostic);
+		result = prime * result + Arrays.hashCode(departOrderedCote);
+		result = prime * result + Arrays.hashCode(departOrderedCoteNumber);
 		result = prime * result + Arrays.hashCode(departRankPronostic);
 		return result;
 	}
@@ -169,11 +178,11 @@ class ApplicationTests {
 		ApplicationTests other = (ApplicationTests) obj;
 		return Arrays.equals(arrivalCoteNumber, other.arrivalCoteNumber)
 				&& Arrays.equals(arrivalNumber, other.arrivalNumber)
-				&& Arrays.equals(caseCoteFirstPosition, other.caseCoteFirstPosition)
-				&& Arrays.equals(caseRankPronosticFirstPosition, other.caseRankPronosticFirstPosition)
-				&& Arrays.equals(departCote, other.departCote)
-				&& Arrays.equals(departOrderedCoteNumber, other.departOrderedCoteNumber)
+				&& Arrays.deepEquals(caseCoteFirstPosition, other.caseCoteFirstPosition)
+				&& Arrays.deepEquals(casePronosticFirstPosition, other.casePronosticFirstPosition)
 				&& Arrays.equals(departCotePronostic, other.departCotePronostic)
+				&& Arrays.equals(departOrderedCote, other.departOrderedCote)
+				&& Arrays.equals(departOrderedCoteNumber, other.departOrderedCoteNumber)
 				&& Arrays.equals(departRankPronostic, other.departRankPronostic);
 	}
 
