@@ -19,34 +19,7 @@ class ApplicationTests {
   private String[][] caseFirstPositionCote = new String[10][3];
 	private String[][] caseFirstPositionNumber = new String[10][3];
 
-	/**
-	 * @return the departOrderedCote
-	 */
-	public String[] getDepartOrderedCote() {
-		return departOrderedCote;
-	}
-
-	/**
-	 * @param departOrderedCote the departOrderedCote to set
-	 */
-	public void setDepartOrderedCote(String[] departOrderedCote) {
-		this.departOrderedCote = departOrderedCote;
-	}
-
-	/**
-	 * @return the casePronosticFirstPosition
-	 */
-	public String[][] getCasePronosticFirstPosition() {
-		return casePronosticFirstPosition;
-	}
-
-	/**
-	 * @param casePronosticFirstPosition the casePronosticFirstPosition to set
-	 */
-	public void setCasePronosticFirstPosition(String[][] casePronosticFirstPosition) {
-		this.casePronosticFirstPosition = casePronosticFirstPosition;
-	}
-
+	
 	public int calculateCoteFirstPositionByArrival(String[] arrivalCoteNumber) {
 		int somme=0;
 		int median=0;
@@ -62,21 +35,6 @@ class ApplicationTests {
 
 		median = somme/actualIndMax;
 		return median;
-	}
-
-	/**
-	 * @return the departOrderedCoteNumber
-	 */
-	public String[] getDepartOrderedCoteNumber() {
-		return departOrderedCoteNumber;
-	}
-
-
-	/**
-	 * @param departOrderedCoteNumber the departOrderedCoteNumber to set
-	 */
-	public void setDepartOrderedCoteNumber(String[] departOrderedCoteNumber) {
-		this.departOrderedCoteNumber = departOrderedCoteNumber;
 	}
 
 	/**
@@ -206,29 +164,6 @@ class ApplicationTests {
 				+ "]";
 	}
 
-	/**
-	 * @param departOrderedCoteNumber
-	 * @param departOrderedCote
-	 * @param arrivalOrderedCote
-	 * @param arrivalOrderedNumber
-	 * @param departOrderedPronosticNumber
-	 * @param departOrderedPronosticCote
-	 * @param caseFirstPositionCote
-	 * @param caseFirstPositionNumber
-	 */
-	public ApplicationTests(String[] departOrderedCoteNumber, String[] departOrderedCote, String[] arrivalOrderedCote,
-			String[] arrivalOrderedNumber, String[] departOrderedPronosticNumber, String[] departOrderedPronosticCote,
-			String[][] caseFirstPositionCote, String[][] caseFirstPositionNumber) {
-		super();
-		this.departOrderedCoteNumber = departOrderedCoteNumber;
-		this.departOrderedCote = departOrderedCote;
-		this.arrivalOrderedCote = arrivalOrderedCote;
-		this.arrivalOrderedNumber = arrivalOrderedNumber;
-		this.departOrderedPronosticNumber = departOrderedPronosticNumber;
-		this.departOrderedPronosticCote = departOrderedPronosticCote;
-		this.caseFirstPositionCote = caseFirstPositionCote;
-		this.caseFirstPositionNumber = caseFirstPositionNumber;
-	}
 
 	@Override
 	public int hashCode() {
