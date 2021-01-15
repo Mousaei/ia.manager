@@ -16,9 +16,37 @@ class ApplicationTests {
 	private String[] departOrderedPronosticNumber= {"6", "8", "5"};
 	private String[] departOrderedPronosticCote= {"3", "5", "6"};
 	
-	private String[][] caseFirstPositionCote = new String[10][3];
+  private String[][] caseFirstPositionCote = new String[10][3];
 	private String[][] caseFirstPositionNumber = new String[10][3];
-	
+
+	/**
+	 * @return the departOrderedCote
+	 */
+	public String[] getDepartOrderedCote() {
+		return departOrderedCote;
+	}
+
+	/**
+	 * @param departOrderedCote the departOrderedCote to set
+	 */
+	public void setDepartOrderedCote(String[] departOrderedCote) {
+		this.departOrderedCote = departOrderedCote;
+	}
+
+	/**
+	 * @return the casePronosticFirstPosition
+	 */
+	public String[][] getCasePronosticFirstPosition() {
+		return casePronosticFirstPosition;
+	}
+
+	/**
+	 * @param casePronosticFirstPosition the casePronosticFirstPosition to set
+	 */
+	public void setCasePronosticFirstPosition(String[][] casePronosticFirstPosition) {
+		this.casePronosticFirstPosition = casePronosticFirstPosition;
+	}
+
 	public int calculateCoteFirstPositionByArrival(String[] arrivalCoteNumber) {
 		int somme=0;
 		int median=0;
@@ -42,6 +70,7 @@ class ApplicationTests {
 	public String[] getDepartOrderedCoteNumber() {
 		return departOrderedCoteNumber;
 	}
+
 
 	/**
 	 * @param departOrderedCoteNumber the departOrderedCoteNumber to set
@@ -205,7 +234,7 @@ class ApplicationTests {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Arrays.hashCode(arrivalOrderedCote);
+    result = prime * result + Arrays.hashCode(arrivalOrderedCote);
 		result = prime * result + Arrays.hashCode(arrivalOrderedNumber);
 		result = prime * result + Arrays.deepHashCode(caseFirstPositionCote);
 		result = prime * result + Arrays.deepHashCode(caseFirstPositionNumber);
@@ -225,6 +254,7 @@ class ApplicationTests {
 			return false;
 		}
 		ApplicationTests other = (ApplicationTests) obj;
+
 		return Arrays.equals(arrivalOrderedCote, other.arrivalOrderedCote)
 				&& Arrays.equals(arrivalOrderedNumber, other.arrivalOrderedNumber)
 				&& Arrays.deepEquals(caseFirstPositionCote, other.caseFirstPositionCote)
@@ -233,10 +263,25 @@ class ApplicationTests {
 				&& Arrays.equals(departOrderedCoteNumber, other.departOrderedCoteNumber)
 				&& Arrays.equals(departOrderedPronosticCote, other.departOrderedPronosticCote)
 				&& Arrays.equals(departOrderedPronosticNumber, other.departOrderedPronosticNumber);
+
 	}
 	
-	
+	@Test
+	void contextLoads() {
+	}
 
-	
+	/**
+	 * @return the departOrderedCoteNumber
+	 */
+	public String[] getDepartOrderedCoteNumber() {
+		return departOrderedCoteNumber;
+	}
+
+	/**
+	 * @param departOrderedCoteNumber the departOrderedCoteNumber to set
+	 */
+	public void setDepartOrderedCoteNumber(String[] departOrderedCoteNumber) {
+		this.departOrderedCoteNumber = departOrderedCoteNumber;
+	}
 	
 }
