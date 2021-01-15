@@ -10,43 +10,16 @@ class ApplicationTests {
 	private String[] departOrderedCoteNumber={"6", "8", "5"};
 	private String[] departOrderedCote={"3", "5", "6"};
 	
-	private String[] arrivalCoteNumber={"17", "32", "3"};
-	private String[] arrivalNumber={"4", "15", "8"};
+	private String[] arrivalOrderedCote={"17", "32", "3"};
+	private String[] arrivalOrderedNumber={"4", "15", "8"};
 	
-	private String[] departRankPronostic= {"6", "8", "5"};
-	private String[] departCotePronostic= {"3", "5", "6"};
+	private String[] departOrderedPronosticNumber= {"6", "8", "5"};
+	private String[] departOrderedPronosticCote= {"3", "5", "6"};
 	
-	private String[][] caseCoteFirstPosition = new String[10][3];
-	private String[][] casePronosticFirstPosition = new String[10][3];
+  private String[][] caseFirstPositionCote = new String[10][3];
+	private String[][] caseFirstPositionNumber = new String[10][3];
+
 	
-	/**
-	 * @return the departOrderedCote
-	 */
-	public String[] getDepartOrderedCote() {
-		return departOrderedCote;
-	}
-
-	/**
-	 * @param departOrderedCote the departOrderedCote to set
-	 */
-	public void setDepartOrderedCote(String[] departOrderedCote) {
-		this.departOrderedCote = departOrderedCote;
-	}
-
-	/**
-	 * @return the casePronosticFirstPosition
-	 */
-	public String[][] getCasePronosticFirstPosition() {
-		return casePronosticFirstPosition;
-	}
-
-	/**
-	 * @param casePronosticFirstPosition the casePronosticFirstPosition to set
-	 */
-	public void setCasePronosticFirstPosition(String[][] casePronosticFirstPosition) {
-		this.casePronosticFirstPosition = casePronosticFirstPosition;
-	}
-
 	public int calculateCoteFirstPositionByArrival(String[] arrivalCoteNumber) {
 		int somme=0;
 		int median=0;
@@ -63,107 +36,147 @@ class ApplicationTests {
 		median = somme/actualIndMax;
 		return median;
 	}
-	
-	/**
-	 * @param caseCoteFirstPosition the caseCoteFirstPosition to set
-	 */
-	public void setCaseCoteFirstPosition(String[][] caseCoteFirstPosition) {
-		this.caseCoteFirstPosition = caseCoteFirstPosition;
-	}
-
-	
-
-	public ApplicationTests() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	
-	
-	
 
 	/**
-	 * @return the arrivalNumber
+	 * @return the departOrderedCote
 	 */
-	public String[] getArrivalNumber() {
-		return arrivalNumber;
+	public String[] getDepartOrderedCote() {
+		return departOrderedCote;
 	}
 
 	/**
-	 * @param arrivalNumber the arrivalNumber to set
+	 * @param departOrderedCote the departOrderedCote to set
 	 */
-	public void setArrivalNumber(String[] arrivalNumber) {
-		this.arrivalNumber = arrivalNumber;
+	public void setDepartOrderedCote(String[] departOrderedCote) {
+		this.departOrderedCote = departOrderedCote;
 	}
 
 	/**
-	 * @return the departCotePronostic
+	 * @return the arrivalOrderedCote
 	 */
-	public String[] getDepartCotePronostic() {
-		return departCotePronostic;
+	public String[] getArrivalOrderedCote() {
+		return arrivalOrderedCote;
 	}
 
 	/**
-	 * @param departCotePronostic the departCotePronostic to set
+	 * @param arrivalOrderedCote the arrivalOrderedCote to set
 	 */
-	public void setDepartCotePronostic(String[] departCotePronostic) {
-		this.departCotePronostic = departCotePronostic;
+	public void setArrivalOrderedCote(String[] arrivalOrderedCote) {
+		this.arrivalOrderedCote = arrivalOrderedCote;
 	}
 
-	
-	
-
-	public String[] getArrivalCoteNumber() {
-		return arrivalCoteNumber;
-	}
-
-	public void setArrivalCoteNumber(String[] arrivalCoteNumber) {
-		this.arrivalCoteNumber = arrivalCoteNumber;
-	}
-
-	public String[] getDepartRankPronostic() {
-		return departRankPronostic;
-	}
-
-	public void setDepartRankPronostic(String[] departRankPronostic) {
-		this.departRankPronostic = departRankPronostic;
-	}
-
-
-	
 	/**
-	 * @return the caseCoteFirstPosition
+	 * @return the arrivalOrderedNumber
 	 */
-	public String[][] getCaseCoteFirstPosition() {
-		return caseCoteFirstPosition;
+	public String[] getArrivalOrderedNumber() {
+		return arrivalOrderedNumber;
 	}
 
-	
+	/**
+	 * @param arrivalOrderedNumber the arrivalOrderedNumber to set
+	 */
+	public void setArrivalOrderedNumber(String[] arrivalOrderedNumber) {
+		this.arrivalOrderedNumber = arrivalOrderedNumber;
+	}
 
+	/**
+	 * @return the departOrderedPronosticNumber
+	 */
+	public String[] getDepartOrderedPronosticNumber() {
+		return departOrderedPronosticNumber;
+	}
+
+	/**
+	 * @param departOrderedPronosticNumber the departOrderedPronosticNumber to set
+	 */
+	public void setDepartOrderedPronosticNumber(String[] departOrderedPronosticNumber) {
+		this.departOrderedPronosticNumber = departOrderedPronosticNumber;
+	}
+
+	/**
+	 * @return the departOrderedPronosticCote
+	 */
+	public String[] getDepartOrderedPronosticCote() {
+		return departOrderedPronosticCote;
+	}
+
+	/**
+	 * @param departOrderedPronosticCote the departOrderedPronosticCote to set
+	 */
+	public void setDepartOrderedPronosticCote(String[] departOrderedPronosticCote) {
+		this.departOrderedPronosticCote = departOrderedPronosticCote;
+	}
+
+	/**
+	 * @return the caseFirstPositionCote
+	 */
+	public String[][] getCaseFirstPositionCote() {
+		return caseFirstPositionCote;
+	}
+
+	/**
+	 * @param caseFirstPositionCote the caseFirstPositionCote to set
+	 */
+	public void setCaseFirstPositionCote(String[][] caseFirstPositionCote) {
+		this.caseFirstPositionCote = caseFirstPositionCote;
+	}
+
+	/**
+	 * @return the caseFirstPositionNumber
+	 */
+	public String[][] getCaseFirstPositionNumber() {
+		return caseFirstPositionNumber;
+	}
+
+	/**
+	 * @param caseFirstPositionNumber the caseFirstPositionNumber to set
+	 */
+	public void setCaseFirstPositionNumber(String[][] caseFirstPositionNumber) {
+		this.caseFirstPositionNumber = caseFirstPositionNumber;
+	}
 
 	@Override
 	public String toString() {
-		return "ApplicationTests [departOrderedCoteNumber=" + Arrays.toString(departOrderedCoteNumber)
-				+ ", departOrderedCote=" + Arrays.toString(departOrderedCote) + ", arrivalCoteNumber="
-				+ Arrays.toString(arrivalCoteNumber) + ", arrivalNumber=" + Arrays.toString(arrivalNumber)
-				+ ", departRankPronostic=" + Arrays.toString(departRankPronostic) + ", departCotePronostic="
-				+ Arrays.toString(departCotePronostic) + ", caseCoteFirstPosition="
-				+ Arrays.toString(caseCoteFirstPosition) + ", casePronosticFirstPosition="
-				+ Arrays.toString(casePronosticFirstPosition) + "]";
+		final int maxLen = 10;
+		return "ApplicationTests [departOrderedCoteNumber=" + (departOrderedCoteNumber != null ? Arrays
+				.asList(departOrderedCoteNumber).subList(0, Math.min(departOrderedCoteNumber.length, maxLen)) : null)
+				+ ", departOrderedCote="
+				+ (departOrderedCote != null ? Arrays
+						.asList(departOrderedCote).subList(0, Math.min(departOrderedCote.length, maxLen)) : null)
+				+ ", arrivalOrderedCote="
+				+ (arrivalOrderedCote != null ? Arrays
+						.asList(arrivalOrderedCote).subList(0, Math.min(arrivalOrderedCote.length, maxLen)) : null)
+				+ ", arrivalOrderedNumber="
+				+ (arrivalOrderedNumber != null ? Arrays.asList(arrivalOrderedNumber)
+						.subList(0, Math.min(arrivalOrderedNumber.length, maxLen)) : null)
+				+ ", departOrderedPronosticNumber="
+				+ (departOrderedPronosticNumber != null ? Arrays.asList(departOrderedPronosticNumber)
+						.subList(0, Math.min(departOrderedPronosticNumber.length, maxLen)) : null)
+				+ ", departOrderedPronosticCote="
+				+ (departOrderedPronosticCote != null ? Arrays.asList(departOrderedPronosticCote)
+						.subList(0, Math.min(departOrderedPronosticCote.length, maxLen)) : null)
+				+ ", caseFirstPositionCote="
+				+ (caseFirstPositionCote != null ? Arrays.asList(caseFirstPositionCote).subList(0,
+						Math.min(caseFirstPositionCote.length, maxLen)) : null)
+				+ ", caseFirstPositionNumber="
+				+ (caseFirstPositionNumber != null ? Arrays.asList(caseFirstPositionNumber).subList(0,
+						Math.min(caseFirstPositionNumber.length, maxLen)) : null)
+				+ "]";
 	}
+
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Arrays.hashCode(arrivalCoteNumber);
-		result = prime * result + Arrays.hashCode(arrivalNumber);
-		result = prime * result + Arrays.deepHashCode(caseCoteFirstPosition);
-		result = prime * result + Arrays.deepHashCode(casePronosticFirstPosition);
-		result = prime * result + Arrays.hashCode(departCotePronostic);
+    result = prime * result + Arrays.hashCode(arrivalOrderedCote);
+		result = prime * result + Arrays.hashCode(arrivalOrderedNumber);
+		result = prime * result + Arrays.deepHashCode(caseFirstPositionCote);
+		result = prime * result + Arrays.deepHashCode(caseFirstPositionNumber);
 		result = prime * result + Arrays.hashCode(departOrderedCote);
 		result = prime * result + Arrays.hashCode(departOrderedCoteNumber);
-		result = prime * result + Arrays.hashCode(departRankPronostic);
+		result = prime * result + Arrays.hashCode(departOrderedPronosticCote);
+		result = prime * result + Arrays.hashCode(departOrderedPronosticNumber);
 		return result;
 	}
 
@@ -176,16 +189,18 @@ class ApplicationTests {
 			return false;
 		}
 		ApplicationTests other = (ApplicationTests) obj;
-		return Arrays.equals(arrivalCoteNumber, other.arrivalCoteNumber)
-				&& Arrays.equals(arrivalNumber, other.arrivalNumber)
-				&& Arrays.deepEquals(caseCoteFirstPosition, other.caseCoteFirstPosition)
-				&& Arrays.deepEquals(casePronosticFirstPosition, other.casePronosticFirstPosition)
-				&& Arrays.equals(departCotePronostic, other.departCotePronostic)
+
+		return Arrays.equals(arrivalOrderedCote, other.arrivalOrderedCote)
+				&& Arrays.equals(arrivalOrderedNumber, other.arrivalOrderedNumber)
+				&& Arrays.deepEquals(caseFirstPositionCote, other.caseFirstPositionCote)
+				&& Arrays.deepEquals(caseFirstPositionNumber, other.caseFirstPositionNumber)
 				&& Arrays.equals(departOrderedCote, other.departOrderedCote)
 				&& Arrays.equals(departOrderedCoteNumber, other.departOrderedCoteNumber)
-				&& Arrays.equals(departRankPronostic, other.departRankPronostic);
-	}
+				&& Arrays.equals(departOrderedPronosticCote, other.departOrderedPronosticCote)
+				&& Arrays.equals(departOrderedPronosticNumber, other.departOrderedPronosticNumber);
 
+	}
+	
 	@Test
 	void contextLoads() {
 	}
@@ -203,6 +218,5 @@ class ApplicationTests {
 	public void setDepartOrderedCoteNumber(String[] departOrderedCoteNumber) {
 		this.departOrderedCoteNumber = departOrderedCoteNumber;
 	}
-
 	
 }
