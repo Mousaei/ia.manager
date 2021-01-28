@@ -16,10 +16,89 @@ class ApplicationTests {
 	private String[] departOrderedPronosticNumber= {"6", "8", "5"};
 	private String[] departOrderedPronosticCote= {"3", "5", "6"};
 	
-  private String[][] caseFirstPositionCote = new String[10][3];
-	private String[][] caseFirstPositionNumber = new String[10][3];
-
+	private String[] departOrderedSynthesisPronosticNumber= {"6", "8", "5"};
+	private String[] departOrderedSynthesisPronosticCote= {"3", "5", "6"};
 	
+	private String[] departOrderedExternalPronosticNumber= {"6", "8", "5"};
+	private String[] departOrderedExternalPronosticCote= {"3", "5", "6"};
+	
+    private String[][] caseFirstPositionCote = new String[10][3];
+	private String[][] caseFirstPositionNumber = new String[10][3];
+	
+	
+	private String[] competitionReturnOnInvestment = {"3", "5", "6"};
+	
+	
+	/**
+	 * @return the departOrderedSynthesisPronosticNumber
+	 */
+	public String[] getDepartOrderedSynthesisPronosticNumber() {
+		return departOrderedSynthesisPronosticNumber;
+	}
+
+	/**
+	 * @param departOrderedSynthesisPronosticNumber the departOrderedSynthesisPronosticNumber to set
+	 */
+	public void setDepartOrderedSynthesisPronosticNumber(String[] departOrderedSynthesisPronosticNumber) {
+		this.departOrderedSynthesisPronosticNumber = departOrderedSynthesisPronosticNumber;
+	}
+
+	/**
+	 * @return the departOrderedSynthesisPronosticCote
+	 */
+	public String[] getDepartOrderedSynthesisPronosticCote() {
+		return departOrderedSynthesisPronosticCote;
+	}
+
+	/**
+	 * @param departOrderedSynthesisPronosticCote the departOrderedSynthesisPronosticCote to set
+	 */
+	public void setDepartOrderedSynthesisPronosticCote(String[] departOrderedSynthesisPronosticCote) {
+		this.departOrderedSynthesisPronosticCote = departOrderedSynthesisPronosticCote;
+	}
+
+	/**
+	 * @return the departOrderedExternalPronosticNumber
+	 */
+	public String[] getDepartOrderedExternalPronosticNumber() {
+		return departOrderedExternalPronosticNumber;
+	}
+
+	/**
+	 * @param departOrderedExternalPronosticNumber the departOrderedExternalPronosticNumber to set
+	 */
+	public void setDepartOrderedExternalPronosticNumber(String[] departOrderedExternalPronosticNumber) {
+		this.departOrderedExternalPronosticNumber = departOrderedExternalPronosticNumber;
+	}
+
+	/**
+	 * @return the departOrderedExternalPronosticCote
+	 */
+	public String[] getDepartOrderedExternalPronosticCote() {
+		return departOrderedExternalPronosticCote;
+	}
+
+	/**
+	 * @param departOrderedExternalPronosticCote the departOrderedExternalPronosticCote to set
+	 */
+	public void setDepartOrderedExternalPronosticCote(String[] departOrderedExternalPronosticCote) {
+		this.departOrderedExternalPronosticCote = departOrderedExternalPronosticCote;
+	}
+
+	/**
+	 * @return the competitionReturnOnInvestment
+	 */
+	public String[] getCompetitionReturnOnInvestment() {
+		return competitionReturnOnInvestment;
+	}
+
+	/**
+	 * @param competitionReturnOnInvestment the competitionReturnOnInvestment to set
+	 */
+	public void setCompetitionReturnOnInvestment(String[] competitionReturnOnInvestment) {
+		this.competitionReturnOnInvestment = competitionReturnOnInvestment;
+	}
+
 	public int calculateCoteFirstPositionByArrival(String[] arrivalCoteNumber) {
 		int somme=0;
 		int median=0;
@@ -137,31 +216,19 @@ class ApplicationTests {
 
 	@Override
 	public String toString() {
-		final int maxLen = 10;
-		return "ApplicationTests [departOrderedCoteNumber=" + (departOrderedCoteNumber != null ? Arrays
-				.asList(departOrderedCoteNumber).subList(0, Math.min(departOrderedCoteNumber.length, maxLen)) : null)
-				+ ", departOrderedCote="
-				+ (departOrderedCote != null ? Arrays
-						.asList(departOrderedCote).subList(0, Math.min(departOrderedCote.length, maxLen)) : null)
-				+ ", arrivalOrderedCote="
-				+ (arrivalOrderedCote != null ? Arrays
-						.asList(arrivalOrderedCote).subList(0, Math.min(arrivalOrderedCote.length, maxLen)) : null)
-				+ ", arrivalOrderedNumber="
-				+ (arrivalOrderedNumber != null ? Arrays.asList(arrivalOrderedNumber)
-						.subList(0, Math.min(arrivalOrderedNumber.length, maxLen)) : null)
-				+ ", departOrderedPronosticNumber="
-				+ (departOrderedPronosticNumber != null ? Arrays.asList(departOrderedPronosticNumber)
-						.subList(0, Math.min(departOrderedPronosticNumber.length, maxLen)) : null)
-				+ ", departOrderedPronosticCote="
-				+ (departOrderedPronosticCote != null ? Arrays.asList(departOrderedPronosticCote)
-						.subList(0, Math.min(departOrderedPronosticCote.length, maxLen)) : null)
-				+ ", caseFirstPositionCote="
-				+ (caseFirstPositionCote != null ? Arrays.asList(caseFirstPositionCote).subList(0,
-						Math.min(caseFirstPositionCote.length, maxLen)) : null)
-				+ ", caseFirstPositionNumber="
-				+ (caseFirstPositionNumber != null ? Arrays.asList(caseFirstPositionNumber).subList(0,
-						Math.min(caseFirstPositionNumber.length, maxLen)) : null)
-				+ "]";
+		return "ApplicationTests [departOrderedCoteNumber=" + Arrays.toString(departOrderedCoteNumber)
+				+ ", departOrderedCote=" + Arrays.toString(departOrderedCote) + ", arrivalOrderedCote="
+				+ Arrays.toString(arrivalOrderedCote) + ", arrivalOrderedNumber="
+				+ Arrays.toString(arrivalOrderedNumber) + ", departOrderedPronosticNumber="
+				+ Arrays.toString(departOrderedPronosticNumber) + ", departOrderedPronosticCote="
+				+ Arrays.toString(departOrderedPronosticCote) + ", departOrderedSynthesisPronosticNumber="
+				+ Arrays.toString(departOrderedSynthesisPronosticNumber) + ", departOrderedSynthesisPronosticCote="
+				+ Arrays.toString(departOrderedSynthesisPronosticCote) + ", departOrderedExternalPronosticNumber="
+				+ Arrays.toString(departOrderedExternalPronosticNumber) + ", departOrderedExternalPronosticCote="
+				+ Arrays.toString(departOrderedExternalPronosticCote) + ", caseFirstPositionCote="
+				+ Arrays.toString(caseFirstPositionCote) + ", caseFirstPositionNumber="
+				+ Arrays.toString(caseFirstPositionNumber) + ", competitionReturnOnInvestment="
+				+ Arrays.toString(competitionReturnOnInvestment) + "]";
 	}
 
 
@@ -169,14 +236,19 @@ class ApplicationTests {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-    result = prime * result + Arrays.hashCode(arrivalOrderedCote);
+		result = prime * result + Arrays.hashCode(arrivalOrderedCote);
 		result = prime * result + Arrays.hashCode(arrivalOrderedNumber);
 		result = prime * result + Arrays.deepHashCode(caseFirstPositionCote);
 		result = prime * result + Arrays.deepHashCode(caseFirstPositionNumber);
+		result = prime * result + Arrays.hashCode(competitionReturnOnInvestment);
 		result = prime * result + Arrays.hashCode(departOrderedCote);
 		result = prime * result + Arrays.hashCode(departOrderedCoteNumber);
+		result = prime * result + Arrays.hashCode(departOrderedExternalPronosticCote);
+		result = prime * result + Arrays.hashCode(departOrderedExternalPronosticNumber);
 		result = prime * result + Arrays.hashCode(departOrderedPronosticCote);
 		result = prime * result + Arrays.hashCode(departOrderedPronosticNumber);
+		result = prime * result + Arrays.hashCode(departOrderedSynthesisPronosticCote);
+		result = prime * result + Arrays.hashCode(departOrderedSynthesisPronosticNumber);
 		return result;
 	}
 
@@ -189,16 +261,19 @@ class ApplicationTests {
 			return false;
 		}
 		ApplicationTests other = (ApplicationTests) obj;
-
 		return Arrays.equals(arrivalOrderedCote, other.arrivalOrderedCote)
 				&& Arrays.equals(arrivalOrderedNumber, other.arrivalOrderedNumber)
 				&& Arrays.deepEquals(caseFirstPositionCote, other.caseFirstPositionCote)
 				&& Arrays.deepEquals(caseFirstPositionNumber, other.caseFirstPositionNumber)
+				&& Arrays.equals(competitionReturnOnInvestment, other.competitionReturnOnInvestment)
 				&& Arrays.equals(departOrderedCote, other.departOrderedCote)
 				&& Arrays.equals(departOrderedCoteNumber, other.departOrderedCoteNumber)
+				&& Arrays.equals(departOrderedExternalPronosticCote, other.departOrderedExternalPronosticCote)
+				&& Arrays.equals(departOrderedExternalPronosticNumber, other.departOrderedExternalPronosticNumber)
 				&& Arrays.equals(departOrderedPronosticCote, other.departOrderedPronosticCote)
-				&& Arrays.equals(departOrderedPronosticNumber, other.departOrderedPronosticNumber);
-
+				&& Arrays.equals(departOrderedPronosticNumber, other.departOrderedPronosticNumber)
+				&& Arrays.equals(departOrderedSynthesisPronosticCote, other.departOrderedSynthesisPronosticCote)
+				&& Arrays.equals(departOrderedSynthesisPronosticNumber, other.departOrderedSynthesisPronosticNumber);
 	}
 	
 	@Test
