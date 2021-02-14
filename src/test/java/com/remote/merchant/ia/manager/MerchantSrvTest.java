@@ -38,12 +38,12 @@ public class MerchantSrvTest {
 	 private RestTemplate restTemplate;
 	 
 	 @InjectMocks
-	 private MerchantService merchantService = new MerchantService();
+	 private MerchantService merchantService;
 	 
 	 @Test
 	 public void givenMockingIsDoneByMockito_whenGetIsCalled_shouldReturnMockedObject() {
-		 	MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
-	        //Mockito.when(restTemplate.getForEntity("http://localhost:8080/merchant/E001", MerchantBean.class)).thenReturn(new ResponseEntity<MerchantBean>(merchant, HttpStatus.OK));
+		 	MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "1", LocalDate.of(2020, 12, 31));
+	        //Mockito.when(restTemplate.getForEntity("http://localhost:8080/merchant/1", MerchantBean.class)).thenReturn(new ResponseEntity<MerchantBean>(merchant, HttpStatus.OK));
 	        //merchant = merchantService.getMerchant("1");
 	        Assert.notNull(merchant);
 	 }

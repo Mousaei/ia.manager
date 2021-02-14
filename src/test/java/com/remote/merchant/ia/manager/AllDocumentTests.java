@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @SuiteClasses({})
 public class AllDocumentTests {
 	 private static final Class<?> MerchantBean = null;
-	@Mock
+	 @Mock
 	 private RestTemplate restTemplate;
 	 @InjectMocks
 	 private MerchantService merchantService = new MerchantService();
