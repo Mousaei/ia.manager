@@ -27,8 +27,8 @@ public class MerchantService {
 	           "<html>\n" 
 	        		+ "<header><title>Welcome</title></header>\n" 
 	        		+ "<body>\n" + "Hello world,\n" + " "
-	          		+ "\n" + "Nous allons acheter 4 kilo d'organe.\n" + ""
-	          		+ "\n" + "Nous allons acheter 4 kilo de fruits et légumes (pommes, oranges, ...). Notre point de départ est le point A. Nous passerons par le Point B et C avant d'arriver au supermarché: Soit le point D.\n" + "" + "<br/>"
+	          		+ "\n" + "Nous allons acheter 4 kilos d'organes.\n" + ""
+	          		+ "\n" + "Nous allons acheter 4 kilos de fruits et légumes (pommes, oranges, ...). Notre point de départ est le point A. \n Nous passerons par le Point B et C avant d'arriver au supermarché: Soit le point D.\n" + "" + "<br/>"
 	          		+ "\n" + "Nous pouvons livrer 3 kilos de fruits ou légumes sur notre trajet de retour. Vous devez vous inscrire sur notre site:\n" + "" + "<br/>"
 	          		+ "\n" + " 1- Pour Acheter ou vendre des Fruits et Légumes si vous êtes sur notre trajet de retour. 2- Pour Acheter ou vendre des Fruits et Légumes si vous êtes sur le trajet de retour d une des personnes inscrites sur notre plateforme.\n" + "" + "<br/>"
 	          	    + "<a href=" + "http://nutrition.object-decision.com>" + "This is my first link</a>" 
@@ -37,7 +37,7 @@ public class MerchantService {
 					
 					
 					+ "<h2>HTML Forms</h2>"
-					+  "<form action='action_page.php'>"
+					+  "<form action='/merchant'>"
 					+  "<fieldset>"
 					+  "<legend>Champs simples</legend>"
 					+  "<label for='fname'>First name:</label><br>"
