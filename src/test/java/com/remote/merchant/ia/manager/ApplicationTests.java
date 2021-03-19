@@ -1,12 +1,18 @@
 package com.remote.merchant.ia.manager;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-@SpringBootTest
+@RunWith(Suite.class)
+@SuiteClasses({})
 class ApplicationTests {
+	
 	private String[] departOrderedCoteNumber={"6", "8", "5"};
 	private String[] departOrderedCote={"3", "5", "6"};
 	
@@ -26,8 +32,33 @@ class ApplicationTests {
 	private String[][] caseFirstPositionNumber = new String[10][3];
 	
 	
+	private int nextFirstPositionMaxIndex;
 	private String[] competitionReturnOnInvestment = {"3", "5", "6"};
 	
+	
+	private int learningByCote() {
+		
+		float firstPositionCoteAverage = 0;
+		
+		for(int i =0; i < caseFirstPositionCote.length ; i ++) {
+			for(int j = 0 ; j < 3 ; j ++) {
+				if(caseFirstPositionCote[i][j] != null)
+				firstPositionCoteAverage = firstPositionCoteAverage + Integer.valueOf(caseFirstPositionCote[i][j]) ;
+			}
+			
+			firstPositionCoteAverage = firstPositionCoteAverage / 3;
+		}
+		
+		firstPositionCoteAverage = firstPositionCoteAverage / caseFirstPositionCote.length;
+		
+		for(int i =0; i < departOrderedCote.length ; i ++) {
+			if ( Integer.valueOf(departOrderedCote[i]) > firstPositionCoteAverage )
+				break;
+			nextFirstPositionMaxIndex = i;
+		}
+		
+		return nextFirstPositionMaxIndex;
+	}
 	
 	/**
 	 * @return the departOrderedSynthesisPronosticNumber
@@ -231,7 +262,6 @@ class ApplicationTests {
 				+ Arrays.toString(competitionReturnOnInvestment) + "]";
 	}
 
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -275,6 +305,14 @@ class ApplicationTests {
 				&& Arrays.equals(departOrderedSynthesisPronosticCote, other.departOrderedSynthesisPronosticCote)
 				&& Arrays.equals(departOrderedSynthesisPronosticNumber, other.departOrderedSynthesisPronosticNumber);
 	}
+	
+	@Test
+	 public void learningByCoteTest() {
+		 	MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "1", LocalDate.of(2020, 12, 31));
+	        Assert.assertNotNull(merchant);
+		 	learningByCote();
+		 	System.out.println("nextFirstPositionMaxIndex Actuall is: " + nextFirstPositionMaxIndex);
+	 }
 	
 	@Test
 	void contextLoads() {
