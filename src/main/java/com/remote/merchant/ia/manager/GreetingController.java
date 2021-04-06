@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
+@SuppressWarnings("hiding")
 @RestController
-public class GreetingController {
+public class GreetingController<Long> {
 
 	private final MerchantRepository repository;
 	
@@ -35,14 +38,14 @@ public class GreetingController {
 	  // Single item
 	  
 	  @GetMapping("/MerchantBeans/{id}")
-	  MerchantBean one(@PathVariable Long id) {
+	  MerchantBean one(@PathVariable java.lang.Long id) {
 	    
-	    return repository.findById(id)
+	    return repository.findById((java.lang.Long) id)
 	      .orElseThrow(() -> new MerchantBeanNotFoundException(id));
 	  }
 
 	  @PutMapping("/MerchantBeans/{id}")
-	  MerchantBean replaceMerchantBean(@RequestBody MerchantBean newMerchantBean, @PathVariable Long id) {
+	  MerchantBean replaceMerchantBean(@RequestBody MerchantBean newMerchantBean, @PathVariable java.lang.Long id) {
 	    
 	    return repository.findById(id)
 	      .map(MerchantBean -> {
@@ -57,7 +60,7 @@ public class GreetingController {
 	  }
 
 	  @DeleteMapping("/MerchantBeans/{id}")
-	  void deleteMerchantBean(@PathVariable Long id) {
+	  void deleteMerchantBean(@PathVariable java.lang.Long id) {
 	    repository.deleteById(id);
 	  }
 	

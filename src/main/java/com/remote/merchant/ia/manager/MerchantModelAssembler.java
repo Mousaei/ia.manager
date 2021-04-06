@@ -17,7 +17,7 @@ class MerchantModelAssembler implements RepresentationModelAssembler<MerchantBea
 	}
 
 	@SuppressWarnings("unused")
-	private MerchantModelAssembler methodOn(final Class<GreetingController> class1) {
+	private MerchantModelAssembler methodOn(@SuppressWarnings("rawtypes") final Class<GreetingController> class1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
