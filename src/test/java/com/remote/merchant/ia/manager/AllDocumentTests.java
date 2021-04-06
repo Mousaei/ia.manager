@@ -62,7 +62,6 @@ public class AllDocumentTests {
 	}
 	 
 
-
 	
 	public int lerningFromDataByActivatingArtificialNeurone() {
 		
