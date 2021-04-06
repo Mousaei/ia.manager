@@ -1,6 +1,7 @@
 package com.remote.merchant.ia.manager;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 import java.time.LocalDate;
 
@@ -69,6 +70,10 @@ public class AllDocumentTests{
 =======
 
 import org.junit.Assert;
+=======
+
+import org.junit.Assert;
+>>>>>>> Stashed changes
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -76,6 +81,9 @@ import org.junit.runners.Suite;
 public class AllDocumentTests {
 	 
 	 //@Test
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	 public void getAllMockedDocumentMockedObject() {
 		    MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
