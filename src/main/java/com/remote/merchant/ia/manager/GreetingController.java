@@ -1,7 +1,5 @@
 package com.remote.merchant.ia.manager;
 
-import java.util.List;
-
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,15 +8,20 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+<<<<<<< Updated upstream
 
 
 @SuppressWarnings("hiding")
+=======
+import antlr.collections.List;
+
+>>>>>>> Stashed changes
 @RestController
 public class GreetingController<Long> {
 
 	private final MerchantRepository repository;
 	
-	GreetingController(MerchantRepository myRepository, MerchantRepository repository) {
+	GreetingController(MerchantRepository repository) {
 	    this.repository = repository;
 	  }
 	
