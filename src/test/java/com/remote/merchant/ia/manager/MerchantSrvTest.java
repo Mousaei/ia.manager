@@ -22,13 +22,11 @@ public class MerchantSrvTest {
 		// TODO Auto-generated constructor stub
 	}
 	
-	 @Test
 	 public void givenMockingIsDonet() {
 		 	MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "1", LocalDate.of(2020, 12, 31));
 	        Assert.assertNotNull(merchant);
 	 }
 	 
-	 @Test
 	 public void givenMockingIsDoneByMockito_whenGetIsCalled_shouldReturnMockedObject() {
 		 	MerchantBean merchant = new MerchantBean("Lyes", "Mouloudi", "1", LocalDate.of(2020, 12, 31));
 	        Assert.assertNotNull(merchant);

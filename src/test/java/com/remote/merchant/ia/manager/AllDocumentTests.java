@@ -1,15 +1,12 @@
 package com.remote.merchant.ia.manager;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
 import java.time.LocalDate;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-
-public class AllDocumentTests{
+public class AllDocumentTests {
 	
 	MerchantBean merchant;
 	
@@ -18,7 +15,6 @@ public class AllDocumentTests{
 	
 	private String[] SelectingNumber = new String[3]; 
 	
-	@Test
 	void contextLoads() {
 	}
 	
@@ -65,35 +61,9 @@ public class AllDocumentTests{
 		merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
 	}
 	 
+
 	
-	@Test
-=======
-
-import org.junit.Assert;
-=======
-
-import org.junit.Assert;
->>>>>>> Stashed changes
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-
-
-public class AllDocumentTests {
-	 
-	 //@Test
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-	 public void getAllMockedDocumentMockedObject() {
-		    MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
-	        merchant.getFirstName();
-	        Assert.assertNotNull(merchant);
-	 }
-	
-
-	@Test
-	private int lerningFromDataByActivatingArtificialNeurone() {
+	public int lerningFromDataByActivatingArtificialNeurone() {
 		
 		final String[] winerPresse = {"7", "3", "2", "1", "10"};
 		final String[] winerEquidia = {"2", "3", "7", "10", "12"};
@@ -136,9 +106,19 @@ public class AllDocumentTests {
 			
 		}
 		
+		 MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
+	     merchant.getFirstName();
 		
-		
+		Assert.assertNotNull(merchant);
 		return 1;
 	}
+	
+	@Test
+	public void getAllMockedDocumentMockedObject() {
+		    MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
+	        merchant.getFirstName();
+	        Assert.assertNotNull(merchant);
+	 }
+	
 	 
 }
