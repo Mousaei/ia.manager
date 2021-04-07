@@ -8,19 +8,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-
-@SuppressWarnings("hiding")
-=======
 import antlr.collections.List;
 
->>>>>>> Stashed changes
-=======
-import antlr.collections.List;
-
->>>>>>> Stashed changes
 @RestController
 public class GreetingController<Long> {
 
@@ -33,8 +22,8 @@ public class GreetingController<Long> {
 	// Aggregate root
 	  // tag::get-aggregate-root[]
 	  @GetMapping("/MerchantBeans")
-	  List<MerchantBean> all() {
-	    return repository.findAll();
+	  List all() {
+	    return (List) repository.findAll();
 	  }
 	  // end::get-aggregate-root[]
 

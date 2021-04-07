@@ -4,22 +4,24 @@ package com.remote.merchant.ia.manager;
 import java.time.LocalDate;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+@TestExecutionListeners(DependencyInjectionTestExecutionListener.class)
 public class AllDocumentTests {
 	
 	MerchantBean merchant;
 	
-
-	private int seuil = 2;
+private int seuil = 2;
 	
 	private String[] SelectingNumber = new String[3]; 
 	
-	void contextLoads() {
-	}
-	
-	
-
 	/**
 	 * @return the seuil
 	 */
@@ -53,17 +55,12 @@ public class AllDocumentTests {
 	public void setSelectingNumber(String[] selectingNumber) {
 		SelectingNumber = selectingNumber;
 	}
-
 	
-	AllDocumentTests(){
-		super();
-	
-		merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
+	void contextLoads() {
 	}
-	 
-
 	
-	public int lerningFromDataByActivatingArtificialNeurone() {
+	@Test
+	public void lerningFromDataByActivatingArtificialNeurone() {
 		
 		final String[] winerPresse = {"7", "3", "2", "1", "10"};
 		final String[] winerEquidia = {"2", "3", "7", "10", "12"};
@@ -110,8 +107,16 @@ public class AllDocumentTests {
 	     merchant.getFirstName();
 		
 		Assert.assertNotNull(merchant);
-		return 1;
 	}
+
+
+
+	AllDocumentTests(){
+		super();
+	
+		merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
+	}
+	 
 	
 	@Test
 	public void getAllMockedDocumentMockedObject() {
@@ -120,5 +125,4 @@ public class AllDocumentTests {
 	        Assert.assertNotNull(merchant);
 	 }
 	
-	 
 }
