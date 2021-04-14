@@ -6,12 +6,16 @@ package com.remote.merchant.ia.manager;
 import java.time.LocalDate;
 
 import org.junit.Assert;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 
 
 /**
  * @author vahidmousaei
  *
  */
+@SpringBootTest
+@AutoConfigureMockMvc
 public class MerchantSrvTest {
 	
 

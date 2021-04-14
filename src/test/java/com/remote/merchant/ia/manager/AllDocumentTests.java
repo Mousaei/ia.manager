@@ -5,15 +5,11 @@ import java.time.LocalDate;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestExecutionListeners;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
-@TestExecutionListeners(DependencyInjectionTestExecutionListener.class)
+@SpringBootTest
+@AutoConfigureMockMvc
 public class AllDocumentTests {
 	
 	MerchantBean merchant;
@@ -59,6 +55,7 @@ private int seuil = 2;
 	void contextLoads() {
 	}
 	
+
 	@Test
 	public void lerningFromDataByActivatingArtificialNeurone() {
 		
@@ -118,7 +115,7 @@ private int seuil = 2;
 	}
 	 
 	
-	@Test
+	
 	public void getAllMockedDocumentMockedObject() {
 		    MerchantBean merchant = new MerchantBean("Vahid", "Mousaei", "001", LocalDate.of(2020, 12, 31));
 	        merchant.getFirstName();
